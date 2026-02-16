@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniVision Security Proposal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "midnight-black": "#000000",
+              "midnight-yellow": "#FFFF00",
+              "midnight-grey": "#1A1A1A",
+              "midnight-accent": "#262626",
+              "midnight-card": "#0A0A0A",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+      }
+      .grid-texture {
+        background-image: radial-gradient(circle, #FFFF00 0.5px, transparent 0.5px);
+        background-size: 40px 40px;
+      }
+      .scan-line {
+        background: linear-gradient(to right, transparent, #FFFF00, transparent);
+        height: 1px;
+        width: 100%;
+        opacity: 0.15;
+      }
+
+      /* Offline & Print Enhancements */
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background-color: white !important;
+          color: black !important;
+        }
+        .bg-midnight-black, .bg-black {
+          background-color: #000 !important;
+          -webkit-print-color-adjust: exact;
+        }
+        .text-midnight-yellow {
+          color: #FFFF00 !important;
+          -webkit-print-color-adjust: exact;
+        }
+        .min-h-screen {
+          min-height: 100vh !important;
+          page-break-after: always;
+        }
+      }
+    </style>
+    <script>
+      // Register Service Worker for Offline Mode
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch(err => {
+            console.log('SW registration failed: ', err);
+          });
+        });
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
