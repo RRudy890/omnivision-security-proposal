@@ -4,21 +4,21 @@ import { SlideProps } from '../../types';
 
 const ServicesSlide: React.FC<SlideProps> = () => {
   return (
-    <div className="max-w-7xl w-full mx-auto relative px-8 py-16 flex flex-col min-h-screen justify-center">
-      <header className="mb-16 flex flex-col md:flex-row md:items-end justify-between border-l-4 border-midnight-yellow pl-8 py-2">
+    <div className="max-w-7xl w-full mx-auto relative px-6 md:px-8 py-12 md:py-16 flex flex-col min-h-screen justify-center">
+      <header className="mb-10 md:mb-16 flex flex-col md:flex-row md:items-end justify-between border-l-4 border-midnight-yellow pl-6 md:pl-8 py-2">
         <div>
-          <h1 className="text-5xl md:text-6xl font-black text-white mt-3 tracking-tight">Value-Added Services</h1>
+          <h1 className="text-4xl md:text-5xl md:text-6xl font-black text-white mt-3 tracking-tight">Value-Added Services</h1>
         </div>
         <div className="mt-4 md:mt-0">
           <img
             src="/logo.png"
             alt="OmniVision Logo"
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-10 md:h-14 w-auto object-contain"
           />
         </div>
       </header>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
         <ServiceCard
           icon="health_and_safety"
           tag="Operational"
@@ -51,17 +51,17 @@ const ServicesSlide: React.FC<SlideProps> = () => {
         />
       </div>
 
-      <footer className="mt-16 pt-10 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="flex items-center space-x-5">
-          <div className="w-14 h-14 bg-midnight-yellow rounded flex items-center justify-center shadow-[0_0_15px_rgba(255,255,0,0.3)]">
-            <span className="material-icons text-midnight-black text-3xl">security</span>
+      <footer className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
+        <div className="flex items-center space-x-4 md:space-x-5">
+          <div className="w-12 h-12 md:w-14 md:h-14 bg-midnight-yellow rounded flex items-center justify-center shadow-[0_0_15px_rgba(255,255,0,0.3)]">
+            <span className="material-icons text-midnight-black text-2xl md:text-3xl">security</span>
           </div>
           <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Global Security Standards Compliant</span>
         </div>
       </footer>
 
       <div className="fixed bottom-[-5%] right-[-5%] opacity-[0.03] pointer-events-none select-none">
-        <span className="material-icons text-[40rem] text-midnight-yellow">shield</span>
+        <span className="material-icons text-[20rem] md:text-[40rem] text-midnight-yellow">shield</span>
       </div>
     </div>
   );

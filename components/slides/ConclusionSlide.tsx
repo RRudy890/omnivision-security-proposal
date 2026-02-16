@@ -4,51 +4,52 @@ import { SlideProps } from '../../types';
 
 const ConclusionSlide: React.FC<SlideProps> = () => {
   return (
-    <div className="min-h-screen flex flex-col font-display relative overflow-hidden bg-midnight-black">
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-midnight-yellow/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-midnight-yellow/5 rounded-full blur-[120px]"></div>
-      </div>
+    <div className="h-screen w-full bg-midnight-black relative overflow-hidden flex flex-col items-center justify-center text-center p-6 md:p-12">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-zinc-800/20 via-midnight-black to-midnight-black"></div>
 
-      <main className="flex-grow flex flex-col items-center justify-center px-8 relative z-10 max-w-7xl mx-auto w-full py-20">
-        <div className="absolute top-0 right-0 p-12">
+      <div className="relative z-10 max-w-5xl w-full">
+        <div className="mb-8 md:mb-12 animate-pulse">
           <img
             src="/logo.png"
             alt="OmniVision Logo"
-            className="h-14 md:h-16 w-auto object-contain"
+            className="h-16 md:h-24 w-auto object-contain mx-auto"
           />
         </div>
 
-        <header className="text-center mb-16">
-          <h1 className="text-6xl lg:text-8xl font-black tracking-tighter text-midnight-yellow mb-6 drop-shadow-[0_0_15px_rgba(255,255,0,0.3)]">STRATEGIC CONCLUSION</h1>
-          <div className="h-1.5 w-32 bg-midnight-yellow mx-auto"></div>
-          <p className="mt-10 text-xl text-zinc-300 max-w-3xl mx-auto font-light leading-relaxed">
-            A high-contrast architectural framework designed for <span className="text-midnight-yellow font-medium italic">absolute vigilance</span> and operational continuity.
-          </p>
-        </header>
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-black text-white mb-6 md:mb-8 tracking-tighter leading-none">
+          SECURE THE <br /><span className="text-midnight-yellow">FUTURE</span>
+        </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-          <BenefitCard icon="verified_user" title="Operational Certainty" desc="Engineered reliability ensuring continuous oversight for mission-critical assets." />
-          <BenefitCard icon="hub" title="Zero Failure Nodes" desc="Multi-layered redundancy built into every core intersection of the network." />
-          <BenefitCard icon="trending_up" title="Scalable Growth" desc="Modular design that evolves with your footprint without structural re-engineering." />
-          <BenefitCard icon="school" title="Masterclass Insight" desc="Deep-dive expertise providing strategic insights that transcend basic protocols." />
-        </div>
+        <p className="text-lg md:text-2xl text-zinc-400 font-light mb-12 md:mb-16 max-w-2xl mx-auto">
+          We are ready to deploy. The standard for LGCID security is about to be redefined.
+        </p>
 
-        <div className="mt-20 w-full max-w-4xl border-l-4 border-midnight-yellow bg-zinc-900/50 p-8 flex items-center justify-between rounded-r">
-          <div className="flex items-center gap-8">
-            <div className="h-20 w-20 overflow-hidden grayscale contrast-125 border border-white/10 rounded">
-              <img alt="Leadership" className="w-full h-full object-cover" src="https://picsum.photos/seed/executive/200/200" />
-            </div>
-            <div>
-              <p className="text-midnight-yellow font-black uppercase tracking-widest text-[10px] mb-2">Executive Commitment</p>
-              <p className="text-white text-lg font-light italic">"Unmatched vigilance and structural integrity for OmniVision Security."</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 border-t border-white/10 pt-8 md:pt-12">
+          <ContactItem icon="person" label="Lead Contact" value="Byers T" />
+          <ContactItem icon="email" label="Email" value="byers@omnivision.co.za" />
+          <ContactItem icon="phone" label="Direct Line" value="+27 21 555 1234" />
+          <ContactItem icon="language" label="Website" value="www.omnivision.co.za" />
         </div>
-      </main>
+      </div>
+
+      <div className="absolute bottom-6 md:bottom-12 w-full text-center">
+        <p className="text-[10px] text-zinc-600 uppercase tracking-[0.5em]">Confidential Proposal • 2024</p>
+      </div>
     </div>
   );
 };
+
+const ContactItem = ({ icon, label, value }: any) => (
+  <div className="flex flex-col items-center gap-2 md:gap-3">
+    <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-zinc-900 border border-zinc-700 flex items-center justify-center text-midnight-yellow">
+      <span className="material-icons text-xl md:text-2xl">{icon}</span>
+    </div>
+    <div>
+      <span className="block text-[10px] uppercase font-bold text-zinc-500 tracking-widest mb-1">{label}</span>
+      <span className="block text-sm md:text-base font-bold text-white break-all">{value}</span>
+    </div>
+  </div>
+);
 
 const BenefitCard = ({ icon, title, desc }: any) => (
   <div className="bg-zinc-900 border border-midnight-yellow/20 p-10 rounded flex flex-col items-center text-center transition-all hover:border-midnight-yellow hover:-translate-y-1">

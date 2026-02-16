@@ -83,43 +83,43 @@ const App: React.FC = () => {
     <div className="bg-black min-h-screen selection:bg-midnight-yellow selection:text-black">
       <SlideWrapper>
         {renderSlide()}
-        
+
         {/* Persistent Global Navigation */}
-        <div className="fixed bottom-8 right-8 z-50 flex items-center space-x-1 no-print">
-          <button 
+        <div className="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 flex items-center space-x-1 no-print scale-90 md:scale-100 origin-bottom-right drop-shadow-2xl">
+          <button
             onClick={handlePrint}
-            className="w-12 h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors mr-1"
+            className="w-10 h-10 md:w-12 md:h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors mr-1 hidden md:flex"
             title="Export to PDF (Ctrl+P)"
           >
             <span className="material-icons text-white/50 group-hover:text-black text-sm">picture_as_pdf</span>
           </button>
 
-          <button 
+          <button
             onClick={toggleFullScreen}
-            className="w-12 h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors mr-4"
+            className="w-10 h-10 md:w-12 md:h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors mr-2 md:mr-4 hidden md:flex"
             title="Toggle Full Screen"
           >
             <span className="material-icons text-white/50 group-hover:text-black text-sm">fullscreen</span>
           </button>
-          
-          <button 
+
+          <button
             onClick={prevSlide}
-            className="w-12 h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors"
+            className="w-10 h-10 md:w-12 md:h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors active:bg-midnight-yellow"
             title="Previous Slide (Left Arrow)"
           >
-            <span className="material-icons text-white group-hover:text-black">chevron_left</span>
+            <span className="material-icons text-white group-hover:text-black group-active:text-black">chevron_left</span>
           </button>
-          
-          <div className="flex items-center justify-center px-4 h-12 bg-midnight-black/50 border-y border-white/20 text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] min-w-[80px]">
+
+          <div className="flex items-center justify-center px-4 h-10 md:h-12 bg-midnight-black/90 border-y border-white/20 text-[10px] font-bold text-white/40 uppercase tracking-[0.2em] min-w-[60px] md:min-w-[80px] backdrop-blur-sm">
             {activeSlideIndex + 1} / {SLIDE_ORDER.length}
           </div>
-          
-          <button 
+
+          <button
             onClick={nextSlide}
-            className="w-12 h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors"
+            className="w-10 h-10 md:w-12 md:h-12 bg-midnight-black border border-white/20 flex items-center justify-center hover:bg-midnight-yellow group transition-colors active:bg-midnight-yellow"
             title="Next Slide (Right Arrow / Space)"
           >
-            <span className="material-icons text-white group-hover:text-black">chevron_right</span>
+            <span className="material-icons text-white group-hover:text-black group-active:text-black">chevron_right</span>
           </button>
         </div>
 

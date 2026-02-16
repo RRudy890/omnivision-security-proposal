@@ -4,23 +4,23 @@ import { SlideProps } from '../../types';
 
 const InfrastructureSlide: React.FC<SlideProps> = () => {
   return (
-    <div className="min-h-screen flex flex-col font-display bg-midnight-black p-12 lg:p-20">
-      <header className="relative mb-12">
-        <div className="max-w-7xl mx-auto flex justify-between items-start border-b border-midnight-yellow/30 pb-6">
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight">Infrastructure Excellence</h1>
+    <div className="min-h-screen flex flex-col font-display bg-midnight-black p-6 md:p-12 lg:p-20">
+      <header className="relative mb-8 md:mb-12">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row justify-between items-start md:items-start border-b border-midnight-yellow/30 pb-6 gap-4">
+          <h1 className="text-3xl md:text-5xl font-extrabold text-white tracking-tight">Infrastructure Excellence</h1>
           <img
             src="/logo.png"
             alt="OmniVision Logo"
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-10 md:h-14 w-auto object-contain self-start md:self-auto"
           />
         </div>
       </header>
 
       <main className="flex-grow">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <section className="space-y-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
+          <section className="space-y-6 md:space-y-8">
             <SectionHeader title="Power & Redundancy" />
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <Panel icon="bolt" title="Power Systems">
                 <PanelList items={["Battery Backup (UPS)", "2x On-site Generators"]} />
               </Panel>
@@ -30,26 +30,26 @@ const InfrastructureSlide: React.FC<SlideProps> = () => {
             </div>
           </section>
 
-          <section className="space-y-8">
+          <section className="space-y-6 md:space-y-8">
             <SectionHeader title="Communications" />
-            <div className="bg-zinc-900/40 p-8 border border-white/10 h-full rounded">
-              <span className="material-icons text-midnight-yellow text-4xl mb-6">settings_voice</span>
-              <h3 className="font-bold text-xl text-white mb-4">Unified Comms Stack</h3>
-              <p className="text-zinc-400 mb-8 leading-relaxed text-sm">
+            <div className="bg-zinc-900/40 p-6 md:p-8 border border-white/10 h-full rounded">
+              <span className="material-icons text-midnight-yellow text-3xl md:text-4xl mb-4 md:mb-6">settings_voice</span>
+              <h3 className="font-bold text-lg md:text-xl text-white mb-3 md:mb-4">Unified Comms Stack</h3>
+              <p className="text-zinc-400 mb-6 md:mb-8 leading-relaxed text-sm">
                 High-availability hybrid communication infrastructure ensuring 99.99% uptime for mission-critical responses.
               </p>
-              <div className="space-y-4">
+              <div className="space-y-3 md:space-y-4">
                 <CommsBadge icon="phone_in_talk" title="VoIP Protocol" label="Primary Line" />
                 <CommsBadge icon="radio" title="Dedicated Radio" label="Field Frequency" />
               </div>
             </div>
           </section>
 
-          <section className="space-y-8">
+          <section className="space-y-6 md:space-y-8">
             <SectionHeader title="Operator Training" />
-            <div className="bg-zinc-900 p-8 border-t-4 border-midnight-yellow shadow-2xl h-full rounded">
-              <h3 className="text-2xl font-black mb-10 text-white">Human Infrastructure</h3>
-              <div className="space-y-8">
+            <div className="bg-zinc-900 p-6 md:p-8 border-t-4 border-midnight-yellow shadow-2xl h-full rounded">
+              <h3 className="text-xl md:text-2xl font-black mb-6 md:mb-10 text-white">Human Infrastructure</h3>
+              <div className="space-y-6 md:space-y-8">
                 <TrainingStep step="1" title="Rigorous Selection" desc="Psychometric and technical screening process for all elite candidates." />
                 <TrainingStep step="2" title="4-Week Programme" desc="Intensive internal training covering SOPs and crisis response." />
                 <TrainingStep step="3" title="Training Centre" desc="Simulation-based learning in our specialized facility." />

@@ -5,9 +5,9 @@ import { SlideProps } from '../../types';
 const FoundationSlide: React.FC<SlideProps> = () => {
   return (
     <div className="flex flex-col md:flex-row min-h-screen border border-white/10 overflow-hidden">
-      <div className="w-full md:w-1/3 bg-midnight-grey p-10 flex flex-col justify-between border-r border-white/10">
+      <div className="w-full md:w-1/3 bg-midnight-grey p-6 md:p-10 flex flex-col justify-between border-b md:border-b-0 md:border-r border-white/10 order-2 md:order-1">
         <div className="space-y-4">
-          <div className="mb-12">
+          <div className="mb-8 md:mb-12">
             <span className="text-midnight-yellow text-xs font-bold tracking-[0.3em] uppercase">Core Statistics</span>
           </div>
 
@@ -17,26 +17,26 @@ const FoundationSlide: React.FC<SlideProps> = () => {
         </div>
       </div>
 
-      <div className="flex-1 p-10 md:p-16 flex flex-col bg-black relative">
-        <div className="absolute top-10 right-10 md:top-16 md:right-16">
+      <div className="flex-1 p-6 md:p-10 md:p-16 flex flex-col bg-black relative order-1 md:order-2">
+        <div className="absolute top-6 right-6 md:top-16 md:right-16">
           <img
             src="/logo.png"
             alt="OmniVision Logo"
-            className="h-12 md:h-14 w-auto object-contain"
+            className="h-10 md:h-14 w-auto object-contain"
           />
         </div>
 
-        <div className="flex justify-between items-start mb-16">
+        <div className="flex justify-between items-start mb-10 md:mb-16 mt-8 md:mt-0">
           <div>
-            <h1 className="text-5xl font-black text-white leading-tight uppercase tracking-tight">
+            <h1 className="text-4xl md:text-5xl font-black text-white leading-tight uppercase tracking-tight">
               Company<br /><span className="text-midnight-yellow">Foundation</span>
             </h1>
-            <div className="h-1 w-32 bg-midnight-yellow mt-6"></div>
+            <div className="h-1 w-24 md:w-32 bg-midnight-yellow mt-4 md:mt-6"></div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-10 flex-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:gap-10 flex-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             <FeatureBlock
               icon="verified_user"
               title="PSIRA Registered"
@@ -49,12 +49,12 @@ const FoundationSlide: React.FC<SlideProps> = () => {
             />
           </div>
 
-          <div className="bg-zinc-900/30 p-10 border border-zinc-800">
-            <div className="flex items-center space-x-3 mb-8">
+          <div className="bg-zinc-900/30 p-6 md:p-10 border border-zinc-800">
+            <div className="flex items-center space-x-3 mb-6 md:mb-8">
               <span className="material-icons text-midnight-yellow">groups</span>
-              <h3 className="font-black text-xl text-white uppercase tracking-widest">Strategic References</h3>
+              <h3 className="font-black text-lg md:text-xl text-white uppercase tracking-widest">Strategic References</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
               <ReferenceItem title="Llandudno SRA" subtitle="Critical Perimeter Protection & Grid Surveillance" />
               <ReferenceItem title="Camps Bay CID" subtitle="AI-Enhanced Threat Detection & Response" />
             </div>

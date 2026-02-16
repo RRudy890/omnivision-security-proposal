@@ -4,68 +4,76 @@ import { SlideProps } from '../../types';
 
 const CommercialsSlide: React.FC<SlideProps> = () => {
   return (
-    <div className="w-full max-w-6xl mx-auto py-12 px-4 flex flex-col justify-center min-h-screen">
-      <div className="bg-midnight-black border border-zinc-800 rounded-none overflow-hidden flex flex-col shadow-2xl">
-        <header className="p-12 flex justify-between items-start">
-          <div className="space-y-2">
-            <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Monitoring Commercials</h1>
-          </div>
-          <img
-            src="/logo.png"
-            alt="OmniVision Logo"
-            className="h-12 md:h-14 w-auto object-contain"
-          />
-        </header>
+    <div className="max-w-7xl mx-auto min-h-screen flex flex-col p-6 md:p-12 w-full justify-center">
+      <header className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 md:mb-12 border-b border-white/10 pb-6 gap-4">
+        <div>
+          <h1 className="text-4xl md:text-5xl font-black text-white mb-2 tracking-tight">Commercials</h1>
+          <p className="text-midnight-yellow font-bold uppercase tracking-widest text-xs md:text-sm">Investment Breakdown</p>
+        </div>
+        <img
+          src="/logo.png"
+          alt="OmniVision Logo"
+          className="h-10 md:h-14 w-auto object-contain"
+        />
+      </header>
 
-        <main className="flex-grow px-12">
-          <div className="overflow-hidden border border-zinc-800">
-            <table className="w-full text-left border-collapse">
-              <thead>
-                <tr className="bg-zinc-900 border-b border-zinc-800">
-                  <th className="py-6 px-8 text-sm font-bold tracking-widest uppercase text-midnight-yellow">Service Breakdown</th>
-                  <th className="py-6 px-8 text-sm font-bold tracking-widest uppercase text-midnight-yellow text-right">Investment (ZAR) <span className="text-[10px] font-medium opacity-70">Ex-VAT</span></th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-zinc-800">
-                <PriceRow icon="settings_input_component" title="Upfront Hardware & Connection" price="Included" />
-                <PriceRow icon="groups" title="Dedicated Desk (3 Ops + Relief)" price="65,000" />
-                <PriceRow icon="notifications_active" title="Alarm Monitoring (4000 alarms)" price="15,500" />
-                <PriceRow icon="videocam" title="Analytics (20 cams)" price="2,200" />
-                <PriceRow icon="key" title="Software Licenses" price="2,200" />
-              </tbody>
-              <tfoot>
-                <tr className="bg-midnight-yellow">
-                  <td className="py-8 px-8">
-                    <span className="text-2xl font-black text-black uppercase tracking-widest">Total Monthly Investment</span>
-                  </td>
-                  <td className="py-8 px-8 text-right">
-                    <div className="inline-block text-black px-4 py-1">
-                      <span className="text-sm font-bold uppercase opacity-60 mr-2">Net:</span>
-                      <span className="text-4xl font-black">R84,900</span>
-                      <span className="text-xs font-bold ml-2 opacity-60 uppercase">pm ex-vat</span>
-                    </div>
-                  </td>
-                </tr>
-              </tfoot>
-            </table>
+      <div className="bg-zinc-900/50 border border-white/10 rounded-xl overflow-hidden mb-8 md:mb-12">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left border-collapse min-w-[600px]">
+            <thead>
+              <tr className="bg-white/5 border-b border-white/10 text-xs uppercase tracking-wider text-zinc-400">
+                <th className="p-4 md:p-6 font-bold">Service Item</th>
+                <th className="p-4 md:p-6 font-bold">Unit Model</th>
+                <th className="p-4 md:p-6 font-bold text-right">Monthly (ZAR)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/5 text-sm md:text-base">
+              <Row item="Dedicated Monitoring Operator" model="Per Desk / Shift" price="R 28,500.00" />
+              <Row item="AI Analytics License (Per Cam)" model="Volume Tier 2" price="R 185.00" />
+              <Row item="Offsite Footage Storage" model="30-Day Cloud Retention" price="R 4,200.00" />
+              <Row item="System Maintenance & Health Checks" model="SLA Level A" price="Included" highlight />
+            </tbody>
+            <tfoot>
+              <tr className="bg-midnight-yellow/10 border-t-2 border-midnight-yellow">
+                <td className="p-4 md:p-6 font-bold text-white uppercase tracking-wider" colSpan={2}>Total Monthly Investment (Excl. VAT)</td>
+                <td className="p-4 md:p-6 font-black text-xl md:text-2xl text-midnight-yellow text-right">R 32,885.00</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div className="bg-blue-900/20 border border-blue-500/30 p-6 rounded-lg flex items-start space-x-4">
+          <span className="material-icons text-blue-400 text-2xl md:text-3xl mt-1">handshake</span>
+          <div>
+            <h3 className="font-bold text-white text-base md:text-lg mb-2">Partnership Value</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              We don't just bill; we build. Includes quarterly strategic reviews and relentless system optimization at no extra cost.
+            </p>
           </div>
-        </main>
+        </div>
+        <div className="bg-midnight-yellow/10 border border-midnight-yellow/30 p-6 rounded-lg flex items-start space-x-4">
+          <span className="material-icons text-midnight-yellow text-2xl md:text-3xl mt-1">rocket_launch</span>
+          <div>
+            <h3 className="font-bold text-white text-base md:text-lg mb-2">Activation Timeline</h3>
+            <p className="text-zinc-400 text-sm leading-relaxed">
+              Full operational handover within <span className="text-white font-bold">14 days</span> of SLA signature.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
-const PriceRow = ({ icon, title, price }: any) => (
-  <tr className="hover:bg-zinc-800/30 transition-colors">
-    <td className="py-6 px-8">
-      <div className="flex items-center gap-4">
-        <span className="material-symbols-outlined !text-midnight-yellow">{icon}</span>
-        <span className="text-lg font-medium text-white">{title}</span>
-      </div>
-    </td>
-    <td className="py-6 px-8 text-right font-bold text-2xl text-white">
+const Row = ({ item, model, price, highlight }: { item: string; model: string; price: string; highlight?: boolean }) => (
+  <tr className={`hover:bg-white/5 transition-colors ${highlight ? 'bg-blue-900/10' : ''}`}>
+    <td className="p-4 md:p-6 text-white">{item}</td>
+    <td className="p-4 md:p-6 text-zinc-300">{model}</td>
+    <td className="p-4 md:p-6 text-right font-semibold">
       {price === 'Included' ? (
-        <span className="inline-flex items-center px-4 py-1.5 border border-midnight-yellow text-midnight-yellow text-sm font-bold uppercase tracking-widest bg-midnight-yellow/5">
+        <span className="inline-flex items-center px-3 py-1 border border-blue-500 text-blue-400 text-xs font-bold uppercase tracking-widest bg-blue-900/20 rounded-full">
           Included
         </span>
       ) : (
@@ -75,7 +83,7 @@ const PriceRow = ({ icon, title, price }: any) => (
         </>
       )}
     </td>
-  </tr>
+  </tr >
 );
 
 export default CommercialsSlide;
