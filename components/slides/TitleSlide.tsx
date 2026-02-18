@@ -13,9 +13,6 @@ const TitleSlide: React.FC<SlideProps> = () => {
             <span className="text-midnight-yellow">PROPOSAL</span>
           </h1>
           <div className="pt-6 md:pt-8 max-w-lg">
-            <h2 className="text-base md:text-xl md:text-2xl font-light text-white/80 tracking-tight">
-              High-Contrast Security Infrastructure & CCTV Strategic Overview
-            </h2>
           </div>
         </div>
         <div className="grid gap-8 md:gap-12 border-t border-white/10 pt-8 md:pt-12 max-w-xl">

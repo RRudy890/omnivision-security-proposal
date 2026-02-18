@@ -43,7 +43,7 @@ const ServicesSlide: React.FC<SlideProps> = () => {
           icon="emergency_share"
           tag="Resilience"
           title="Contingency"
-          desc="Robust planning for external disruptions to ensure uninterrupted business continuity."
+          desc="Robust planning for external disruptions to ensure uninterrupted business."
           items={[
             { title: "Labour Action Protocols", sub: "Pre-defined response plans for staff shortages." },
             { title: "Staff Housing & Transport Plan", sub: "Logistics for essential staff during local crises." }

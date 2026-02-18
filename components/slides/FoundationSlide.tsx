@@ -13,7 +13,7 @@ const FoundationSlide: React.FC<SlideProps> = () => {
 
           <StatCard icon="location_city" label="Infrastructure" value="500+" sub="Sites Under Management" />
           <StatCard icon="videocam" label="Deployment" value="8200+" sub="Active Cameras" />
-          <StatCard icon="support_agent" label="Operations" value="15+" sub="Certified Operators" />
+          <StatCard icon="support_agent" label="Operations" value="15+" sub="Certified Operators on any given shift" />
         </div>
       </div>
 
@@ -55,8 +55,10 @@ const FoundationSlide: React.FC<SlideProps> = () => {
               <h3 className="font-black text-lg md:text-xl text-white uppercase tracking-widest">Strategic References</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
-              <ReferenceItem title="Llandudno SRA" subtitle="Critical Perimeter Protection & Grid Surveillance" />
-              <ReferenceItem title="Camps Bay CID" subtitle="AI-Enhanced Threat Detection & Response" />
+              <ReferenceItem title="Llandudno SRA" subtitle="" />
+              <ReferenceItem title="Camps Bay CID" subtitle="" />
+              <ReferenceItem title="Kalk Bay & St James CID" subtitle="" />
+              <ReferenceItem title="Observatory CID" subtitle="" />
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ const ProcessSlide: React.FC<SlideProps> = () => {
           Monitoring <span className="text-midnight-yellow">Process</span>
         </h1>
         <p className="text-lg md:text-xl text-white/60 font-light max-w-2xl mx-auto">
-          High-contrast tactical monitoring. Our 4-step interactive cycle ensures immediate threat neutralization through AI-driven precision.
+          Our 4-step interactive cycle ensures immediate Threat Detection through AI-driven precision.
         </p>
       </header>
 
@@ -31,7 +31,7 @@ const ProcessSlide: React.FC<SlideProps> = () => {
             step="01"
             icon="radar"
             title="Detect"
-            desc="AI/Analytics detects potential threat via perimeter algorithms."
+            desc="AI/Analytics detects potential threat via AI driven analytics."
             hasArrow={true}
           />
           <ProcessStep
@@ -62,7 +62,6 @@ const ProcessSlide: React.FC<SlideProps> = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-midnight-black via-transparent to-midnight-black"></div>
         <div className="absolute inset-0 flex items-center justify-center p-4">
           <div className="bg-midnight-black/80 backdrop-blur-sm border-l-4 border-midnight-yellow p-6 md:p-8 max-w-xl text-center md:text-left">
-            <p className="text-midnight-yellow font-black tracking-[0.3em] text-xs mb-3 uppercase">Elite Response Unit</p>
             <p className="text-xl md:text-3xl font-bold text-white uppercase tracking-tight leading-tight">Zero-Latency Strategic Monitoring Operations</p>
           </div>
         </div>

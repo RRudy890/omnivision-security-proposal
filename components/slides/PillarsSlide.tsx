@@ -30,7 +30,7 @@ const PillarsSlide: React.FC<SlideProps> = () => {
               <div className="w-10 h-10 rounded-full border border-midnight-yellow/40 overflow-hidden grayscale contrast-125 flex-shrink-0">
                 <img className="w-full h-full object-cover" src="https://picsum.photos/seed/lead1/100/100" alt="Lead" />
               </div>
-              <span className="text-[10px] md:text-xs font-bold text-midnight-yellow uppercase tracking-widest">Assigned Team Lead</span>
+              <span className="text-[10px] md:text-xs font-bold text-midnight-yellow uppercase tracking-widest">LGCID & OV Integration</span>
             </div>
           }
         />
@@ -75,6 +75,7 @@ const PillarsSlide: React.FC<SlideProps> = () => {
           </div>
           <div className="flex flex-wrap gap-4 items-center relative z-10 w-full md:w-auto">
             <TechItem icon="video_settings" title="Blue Iris VMS" sub="Management Engine" />
+            <TechItem icon="dns" title="Immix" sub="Central Monitoring Station" />
             <TechItem icon="psychology" title="Behavioural Analytics" sub="Crowd & Loitering" />
             <TechItem icon="cloud_done" title="Secure Archiving" sub="Cloud Redundancy" />
           </div>

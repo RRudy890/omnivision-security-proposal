@@ -21,19 +21,19 @@ const ConclusionSlide: React.FC<SlideProps> = () => {
         </h1>
 
         <p className="text-lg md:text-2xl text-zinc-400 font-light mb-12 md:mb-16 max-w-2xl mx-auto">
-          We are ready to deploy. The standard for LGCID security is about to be redefined.
+          A reliable partnership committed to keeping the Lower Gardens community safe through proactive monitoring and dedicated support.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 border-t border-white/10 pt-8 md:pt-12">
-          <ContactItem icon="person" label="Lead Contact" value="Byers T" />
-          <ContactItem icon="email" label="Email" value="byers@omnivision.co.za" />
-          <ContactItem icon="phone" label="Direct Line" value="+27 21 555 1234" />
-          <ContactItem icon="language" label="Website" value="www.omnivision.co.za" />
+          <BenefitCard icon="visibility" title="Always Watching, Always Ready" desc="Our 24/7 dedicated team ensures constant, reliable oversight of the Lower Gardens community, so you never have to worry about gaps in your security." />
+          <BenefitCard icon="battery_charging_full" title="Built for Resilience" desc="With comprehensive power backups and network failovers in place, your security stays online without interruption—even during unexpected outages." />
+          <BenefitCard icon="extension" title="Adaptable to Your Needs" desc="As the LGCID grows and evolves, our flexible monitoring systems can easily expand alongside you, adding new cameras or features seamlessly." />
+          <BenefitCard icon="support_agent" title="Expert Human Oversight" desc="Technology is only as good as the people behind it. Our rigorously trained operators provide the critical human judgment needed to turn AI alerts into effective action." />
         </div>
       </div>
 
       <div className="absolute bottom-6 md:bottom-12 w-full text-center">
-        <p className="text-[10px] text-zinc-600 uppercase tracking-[0.5em]">Confidential Proposal • 2024</p>
+        <p className="text-[10px] text-zinc-600 uppercase tracking-[0.5em] px-4">"Committed to partnering with LGCID to provide unwavering protection and peace of mind for the Lower Gardens community."</p>
       </div>
     </div>
   );
