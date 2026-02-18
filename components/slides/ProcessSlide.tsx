@@ -31,7 +31,7 @@ const ProcessSlide: React.FC<SlideProps> = () => {
             step="01"
             icon="radar"
             title="Detect"
-            desc="AI/Analytics detects potential threat via AI driven analytics."
+            desc="ai driven analytics and skilled CCTV operators detects potential threat"
             hasArrow={true}
           />
           <ProcessStep

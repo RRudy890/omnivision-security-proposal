@@ -77,7 +77,7 @@ const PillarsSlide: React.FC<SlideProps> = () => {
             <TechItem icon="video_settings" title="Blue Iris VMS" sub="Management Engine" />
             <TechItem icon="dns" title="Immix" sub="Central Monitoring Station" />
             <TechItem icon="psychology" title="Behavioural Analytics" sub="Crowd & Loitering" />
-            <TechItem icon="cloud_done" title="Secure Archiving" sub="Cloud Redundancy" />
+            <TechItem icon="psychology" title="human detection analytics" sub="AI Enhancement" />
           </div>
         </div>
       </footer>

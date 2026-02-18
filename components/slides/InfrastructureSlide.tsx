@@ -41,6 +41,8 @@ const InfrastructureSlide: React.FC<SlideProps> = () => {
               <div className="space-y-3 md:space-y-4">
                 <CommsBadge icon="phone_in_talk" title="VoIP Protocol" label="Primary Line" />
                 <CommsBadge icon="radio" title="Dedicated Radio" label="Field Frequency" />
+                <CommsBadge icon="chat" title="WhatsApp" label="Instant Messaging" />
+                <CommsBadge icon="smartphone" title="Cell Phone" label="Direct Access" />
               </div>
             </div>
           </section>

@@ -30,7 +30,7 @@ const CommercialsSlide: React.FC<SlideProps> = () => {
               <Row item="Upfront Hardware & Connection" price="Included" highlight />
               <Row item="Dedicated Desk (3 Ops + Relief)" price="R 65,000.00" />
               <Row item="Alarm Monitoring (4,000 alarms)" price="R 15,500.00" />
-              <Row item="Analytics (20 cams)" price="R 2,200.00" />
+              <Row item="Analytics (20 licenses)" price="R 2,200.00" />
               <Row item="Software Licenses" price="R 2,200.00" />
             </tbody>
             <tfoot>

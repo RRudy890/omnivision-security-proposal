@@ -24,6 +24,12 @@ const ConclusionSlide: React.FC<SlideProps> = () => {
           A reliable partnership committed to keeping the Lower Gardens community safe through proactive monitoring and dedicated support.
         </p>
 
+        <div className="bg-midnight-yellow/10 border border-midnight-yellow/40 px-6 md:px-8 py-4 rounded-xl backdrop-blur-sm max-w-3xl mx-auto mb-12">
+          <p className="text-xs md:text-base text-white font-bold uppercase tracking-widest text-center leading-relaxed italic">
+            "Committed to partnering with LGCID to provide unwavering protection and peace of mind for the Lower Gardens community."
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 border-t border-white/10 pt-8 md:pt-12 mb-16 md:mb-0">
           <BenefitCard icon="visibility" title="Always Watching, Always Ready" desc="Our 24/7 dedicated team ensures constant, reliable oversight of the Lower Gardens community, so you never have to worry about gaps in your security." />
           <BenefitCard icon="battery_charging_full" title="Built for Resilience" desc="With comprehensive power backups and network failovers in place, your security stays online without interruption, even during unexpected outages." />
@@ -32,11 +38,6 @@ const ConclusionSlide: React.FC<SlideProps> = () => {
         </div>
       </div>
 
-      <div className="relative md:absolute bottom-6 md:bottom-12 w-full px-6 flex justify-center mt-8 md:mt-0 z-20">
-        <div className="bg-midnight-yellow/10 border border-midnight-yellow/40 px-6 md:px-8 py-3 md:py-4 rounded-xl backdrop-blur-sm max-w-xl">
-          <p className="text-[10px] md:text-sm text-white font-bold uppercase tracking-widest text-center">"Committed to partnering with LGCID to provide unwavering protection and peace of mind for the Lower Gardens community."</p>
-        </div>
-      </div>
     </div>
   );
 };

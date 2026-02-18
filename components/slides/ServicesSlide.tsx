@@ -23,7 +23,7 @@ const ServicesSlide: React.FC<SlideProps> = () => {
           icon="health_and_safety"
           tag="Operational"
           title="System Health"
-          desc="Continuous technical oversight to ensure zero-downtime performance of your security infrastructure."
+          desc="Continuous technical oversight to ensure high availability of your security infrastructure"
           items={[
             { title: "Daily Camera Checks", sub: "Visual verification of all feed angles and clarity." },
             { title: "Auto-Connection Tests (5min)", sub: "Automated pings to ensure network stability." }
