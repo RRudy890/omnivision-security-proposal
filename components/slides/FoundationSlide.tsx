@@ -45,7 +45,7 @@ const FoundationSlide: React.FC<SlideProps> = () => {
             <FeatureBlock
               icon="settings_input_component"
               title="24-hr Control Room"
-              desc="High-intensity centralized monitoring hub active 365 days a year without fail."
+              desc="centralized monitoring hub, active 365 days a year without fail."
             />
           </div>
 

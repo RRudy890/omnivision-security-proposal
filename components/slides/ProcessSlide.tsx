@@ -57,14 +57,18 @@ const ProcessSlide: React.FC<SlideProps> = () => {
         </div>
       </div>
 
-      <div className="mt-12 md:mt-20 w-full max-w-6xl overflow-hidden border border-midnight-yellow/20 relative h-[250px] md:h-[300px] rounded">
+      <div className="mt-8 md:mt-20 w-full max-w-6xl overflow-hidden border border-midnight-yellow/20 relative h-[180px] md:h-[300px] rounded">
         <img className="w-full h-full object-cover grayscale opacity-30" src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&q=80&w=1200" alt="Command center" />
         <div className="absolute inset-0 bg-gradient-to-r from-midnight-black via-transparent to-midnight-black"></div>
         <div className="absolute inset-0 flex items-center justify-center p-4">
-          <div className="bg-midnight-black/80 backdrop-blur-sm border-l-4 border-midnight-yellow p-6 md:p-8 max-w-xl text-center md:text-left">
-            <p className="text-xl md:text-3xl font-bold text-white uppercase tracking-tight leading-tight">Zero-Latency Strategic Monitoring Operations</p>
+          <div className="bg-midnight-black/80 backdrop-blur-sm border-l-4 border-midnight-yellow p-4 md:p-8 max-w-xl text-center md:text-left">
+            <p className="text-lg md:text-3xl font-bold text-white uppercase tracking-tight leading-tight">Zero-Latency Strategic Monitoring Operations</p>
           </div>
         </div>
+      </div>
+
+      <div className="hidden md:block fixed bottom-[-5%] right-[-5%] opacity-[0.03] pointer-events-none select-none">
+        <span className="material-icons text-[20rem] md:text-[40rem] text-midnight-yellow">shield</span>
       </div>
     </div>
   );

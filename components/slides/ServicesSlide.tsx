@@ -51,16 +51,9 @@ const ServicesSlide: React.FC<SlideProps> = () => {
         />
       </div>
 
-      <footer className="mt-12 md:mt-16 pt-8 md:pt-10 border-t border-white/10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
-        <div className="flex items-center space-x-4 md:space-x-5">
-          <div className="w-12 h-12 md:w-14 md:h-14 bg-midnight-yellow rounded flex items-center justify-center shadow-[0_0_15px_rgba(255,255,0,0.3)]">
-            <span className="material-icons text-midnight-black text-2xl md:text-3xl">security</span>
-          </div>
-          <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Global Security Standards Compliant</span>
-        </div>
-      </footer>
 
-      <div className="fixed bottom-[-5%] right-[-5%] opacity-[0.03] pointer-events-none select-none">
+
+      <div className="hidden md:block fixed bottom-[-5%] right-[-5%] opacity-[0.03] pointer-events-none select-none">
         <span className="material-icons text-[20rem] md:text-[40rem] text-midnight-yellow">shield</span>
       </div>
     </div>
@@ -68,25 +61,25 @@ const ServicesSlide: React.FC<SlideProps> = () => {
 };
 
 const ServiceCard = ({ icon, tag, title, desc, items }: any) => (
-  <div className="bg-midnight-card border rounded-xl p-10 shadow-2xl transition-all duration-300 relative overflow-hidden group hover:border-midnight-yellow/50 border-midnight-yellow/20">
+  <div className="bg-midnight-card border rounded-xl p-6 md:p-10 shadow-2xl transition-all duration-300 relative overflow-hidden group hover:border-midnight-yellow/50 border-midnight-yellow/20">
     <div className="absolute top-0 left-0 w-full h-1 bg-midnight-yellow"></div>
-    <div className="mb-8 flex items-center justify-between">
-      <div className="bg-midnight-yellow/10 p-5 rounded-xl border border-midnight-yellow/20">
-        <span className="material-icons text-midnight-yellow text-4xl">{icon}</span>
+    <div className="mb-6 md:mb-8 flex items-center justify-between">
+      <div className="bg-midnight-yellow/10 p-4 md:p-5 rounded-xl border border-midnight-yellow/20">
+        <span className="material-icons text-midnight-yellow text-3xl md:text-4xl">{icon}</span>
       </div>
       <span className="text-[10px] font-black text-midnight-yellow bg-midnight-yellow/5 px-4 py-1.5 rounded-full border border-midnight-yellow/30 uppercase tracking-widest">{tag}</span>
     </div>
-    <h3 className="text-2xl font-bold text-white mb-5">{title}</h3>
-    <p className="text-zinc-400 mb-10 leading-relaxed text-sm">{desc}</p>
-    <ul className="space-y-6">
+    <h3 className="text-xl md:text-2xl font-bold text-white mb-4 md:mb-5">{title}</h3>
+    <p className="text-zinc-400 mb-6 md:mb-10 leading-relaxed text-xs md:text-sm">{desc}</p>
+    <ul className="space-y-4 md:space-y-6">
       {items.map((it: any, i: number) => (
         <li key={i} className="flex items-start">
           <div className="flex-shrink-0 mt-1">
-            <span className="material-icons text-midnight-yellow text-2xl drop-shadow-[0_0_5px_rgba(255,255,0,0.5)]">check_circle</span>
+            <span className="material-icons text-midnight-yellow text-xl md:text-2xl drop-shadow-[0_0_5px_rgba(255,255,0,0.5)]">check_circle</span>
           </div>
-          <div className="ml-4">
-            <span className="text-white font-bold block text-base">{it.title}</span>
-            <span className="text-zinc-500 text-xs">{it.sub}</span>
+          <div className="ml-3 md:ml-4">
+            <span className="text-white font-bold block text-sm md:text-base">{it.title}</span>
+            <span className="text-zinc-500 text-[10px] md:text-xs">{it.sub}</span>
           </div>
         </li>
       ))}

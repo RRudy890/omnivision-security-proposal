@@ -23,8 +23,11 @@ const TitleSlide: React.FC<SlideProps> = () => {
         </div>
       </section>
 
-      <section className="relative w-full md:w-[40%] h-[40vh] md:h-full bg-midnight-black overflow-hidden border-t md:border-t-0 md:border-l border-white/5">
-        <div className="absolute inset-0 grid-texture opacity-10"></div>
+      <div className="h-screen w-full bg-midnight-black relative overflow-hidden flex flex-col items-center justify-center text-center p-6 md:p-12">
+        <div className="absolute inset-0">
+          <img src="/pg1-bg.png" alt="Background" className="w-full h-full object-cover opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-t from-midnight-black via-midnight-black/80 to-transparent"></div>
+        </div>
         <div className="absolute inset-0 grayscale contrast-150 brightness-50 opacity-40">
           <img
             className="w-full h-full object-cover mix-blend-overlay"
@@ -38,7 +41,9 @@ const TitleSlide: React.FC<SlideProps> = () => {
           <div className="scan-line"></div>
           <div className="scan-line"></div>
         </div>
-      </section>
+      </div>
+
+
 
       {/* Decorative corner borders */}
       <div className="absolute top-0 left-0 w-8 md:w-16 h-8 md:h-16 border-t-2 md:border-t-4 border-l-2 md:border-l-4 border-midnight-yellow z-30"></div>
@@ -51,7 +56,7 @@ const TitleSlide: React.FC<SlideProps> = () => {
           className="h-10 md:h-20 w-auto object-contain"
         />
       </div>
-    </div>
+    </div >
   );
 };
 
